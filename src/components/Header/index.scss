@@ -1,0 +1,40 @@
+@use '../../scss/' as *;
+
+.header {
+	display: none;
+	margin: 0 auto;
+	&_brand {
+		background-color: $salmon;
+	}
+
+	&_tabs {
+		display: flex;
+		background-color: $white;
+	}
+
+	&_noti {
+		& > button {
+			margin-left: 8px;
+		}
+	}
+
+	&_link {
+		color: $gray;
+		flex: 1; // chia deu
+		padding: 16px;
+
+		& > i {
+			margin-right: 8px;
+		}
+
+		&:hover,
+		&--active {
+			color: $salmon;
+			border-bottom: 5px solid $salmon;
+		}
+	}
+
+	@include tablet {
+		display: block;
+	}
+}

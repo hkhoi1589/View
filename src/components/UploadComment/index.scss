@@ -1,0 +1,43 @@
+@use '../../scss/' as *;
+
+.upload-comment {
+	width: 100%;
+	align-items: flex-start;
+
+	&_content {
+		width: 80%;
+		align-items: flex-start;
+
+		& > textarea {
+			flex: 1;
+			height: 40px;
+			min-height: 40px;
+			max-height: 40vh;
+			border-radius: $bdrds;
+			padding: 8px 16px;
+			text-align: start;
+			background-color: $lightGray;
+			font-size: $fontSmall;
+		}
+	}
+
+	&_button {
+		width: 20%;
+		height: 40px;
+		border-radius: $bdrds;
+		background-color: $salmon;
+		color: $white;
+		padding: 10px;
+	}
+
+	@include mobile {
+		.profile_img {
+			display: none;
+		}
+
+		&_button {
+			width: 20%;
+			border-radius: calc($bdrds/2);
+		}
+	}
+}

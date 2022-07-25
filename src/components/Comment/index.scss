@@ -1,0 +1,20 @@
+@use '../../scss/' as *;
+
+.comment {
+	display: flex;
+	margin: 16px 0;
+
+	&_readmore {
+		text-decoration: underline;
+		font-size: inherit;
+		background-color: inherit;
+		color: #e32a3a;
+	}
+
+	&_text {
+		flex: 3;
+		& > span {
+			color: $gray;
+		}
+	}
+}

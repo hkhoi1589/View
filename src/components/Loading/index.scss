@@ -1,0 +1,21 @@
+@use '../../scss/' as *;
+
+.loading {
+	width: 100%;
+
+	&--post {
+		height: 500px;
+	}
+
+	&--full {
+		height: 100vh;
+		background-color: $lightGray;
+		position: fixed;
+		z-index: 4; // cao nhat
+	}
+
+	img {
+		width: 100px;
+		height: 100px;
+	}
+}

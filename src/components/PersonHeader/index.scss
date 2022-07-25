@@ -1,0 +1,66 @@
+@use '../../scss/' as *;
+
+.person-header {
+	background-color: $white;
+	border-radius: $bdrds;
+	padding: $padding;
+
+	&_img {
+		height: 320px;
+		position: relative;
+	}
+
+	&_cover {
+		& > img,
+		& > div {
+			height: 250px;
+			object-fit: cover;
+		}
+	}
+
+	&_preview {
+		width: 48%;
+	}
+
+	&_user {
+		position: absolute;
+		top: 150px;
+		left: 0;
+		right: 0;
+
+		width: 150px;
+		margin: auto;
+	}
+
+	&_info {
+		text-align: center;
+		min-height: 40px;
+	}
+
+	&_buttons {
+		text-align: center;
+	}
+
+	&_button {
+		margin-top: 10px;
+		width: 150px;
+		border: 2px solid $salmon;
+
+		&--gray {
+			margin-left: 10px;
+			background-color: $gray;
+			color: $smokyBlack;
+			border: 1px solid $gray !important;
+		}
+	}
+
+	@include mobile {
+		&_button {
+			width: 100%;
+			&--gray {
+				margin-top: 5px;
+				margin-left: 0;
+			}
+		}
+	}
+}

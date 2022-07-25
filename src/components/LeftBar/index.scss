@@ -1,0 +1,90 @@
+@use '../../scss/' as *;
+
+.leftbar {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 1;
+	width: $widthLeft;
+	min-height: 100vh;
+	background-color: $white;
+	box-shadow: $shadow;
+
+	&_container {
+		font-size: $fontMed;
+		font-weight: $fontLight;
+	}
+
+	&_brand {
+		& > img {
+			padding: 12px;
+			max-width: 50px;
+			max-height: 50px;
+			object-fit: cover;
+			border-radius: 100%;
+			box-shadow: $reverseShadow;
+		}
+
+		& > p {
+			font-size: $fontSuperBig;
+			font-weight: $fontMedium;
+			color: $salmon;
+		}
+	}
+
+	&_menu {
+		border-bottom: 1px solid $gray;
+
+		& > h2 {
+			padding: $padding;
+		}
+	}
+
+	&_title {
+		font-size: $fontBig;
+		color: $black;
+	}
+
+	&_list {
+		& a {
+			display: flex;
+			padding: $padding;
+			margin-bottom: 8px;
+
+			& > i {
+				width: 20px;
+				height: 20px;
+				margin-right: 8px;
+			}
+		}
+	}
+
+	&_link {
+		color: $gray;
+		&:hover,
+		&--active {
+			background-color: $salmon;
+			color: $white;
+		}
+	}
+
+	@include tablet {
+		display: none;
+		box-shadow: none;
+		&_brand {
+			& > img {
+				background-color: $white;
+			}
+
+			& > p {
+				color: $white;
+			}
+		}
+
+		&_list {
+			& a {
+				justify-content: center;
+			}
+		}
+	}
+}
